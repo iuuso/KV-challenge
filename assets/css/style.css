@@ -1,0 +1,148 @@
+/* ==========================================================================
+
+  Name: style.css
+  Author: Juuso Karlström
+  Author-URI: http://iuuso.github.io/
+  Date: August 2015
+
+==========================================================================*/
+
+html
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    background: none;
+
+    /* Temporary text settings to make everything bold and big
+        for testing of the layout*/
+
+}
+
+body
+{
+    font: 10pt/1.5em 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.75;
+    text-align: center;
+    background: #f1f1ec;
+    width: 100%;
+}
+
+/* ==========================================================================
+
+    The following is for making the site
+    suitable for smaller screens as well.
+
+========================================================================== */
+
+@media screen and (min-width:600px)
+{
+    header
+    {
+        background: red;
+    }
+}
+@media screen and (max-width:599px)
+{
+    header
+    {
+        background: green;
+    }
+}
+
+header
+{
+    width: 100%;
+    height: 3em;
+    border-bottom: 4px solid #dbdbd5;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: white;
+    z-index: 100;
+
+}
+    header ul { display: inline; list-style-type: none; }
+    header li { float: right; padding: .5em 1em; }
+
+    .city-selector a:link, .city-selector a:visited { color: #45a8cd; }
+    .login-registration a:link, .login-registration a:visited { color: #bf243f; }
+    .separator { color: #dbdbd5;}
+
+footer 
+{
+    width: 100%;
+    height: 15em;
+    border: 1px solid red;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+}
+
+#container
+{
+    margin: 6em auto;
+    max-width: 900px;
+    height: 1009px;
+    position: relative;
+    
+}
+
+/* Top picture on the Grid */
+#grid-top
+{
+    max-width: 900px;
+    border: 1px dotted red;
+    border-radius: 10px;
+    height: 300px;
+    margin: 0 auto;
+    background: url("../img/header-bg.png"); /* The "curtain" image */
+    background-position: center;
+
+}
+
+#center-left
+{
+    margin: 15px auto;
+    width: 290px;
+    position: relative;
+    border: 3px dashed red;
+    border-radius: 10px;
+    height: 200px;
+    position: absolute;
+    left: 0px;
+    background: white;
+}
+
+#center-middle
+{
+    margin: 15px auto;
+    width: 290px;
+    position: relative;
+    border: 3px dashed black;
+    border-radius: 10px;
+    height: 200px;
+    position: absolute;
+    left: 300px;
+    background: white;
+    
+}
+
+#center-right
+{
+    margin: 15px auto;
+    width: 290px;
+    border: 3px dashed blue;
+    border-radius: 10px;
+    height: 200px;
+    position: absolute;
+    left: 600px;
+    background: white;
+}
