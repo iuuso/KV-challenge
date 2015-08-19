@@ -6,50 +6,83 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Viidakko-challenge</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
     <!-- CSS -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 
+    <!-- Import fonts from Google -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
+
+
+    <div id="badge">
+        <p>MEGAKISA</p>
+        <p id="badgecity">Oulu</p>
+    </div>
 
     <header>
         <ul>            
             <li class="login-registration"><a href="#">REKISTERÖIDY</a></li>
             <li class="separator"> | </li> 
             <li class="login-registration"><a href="#">KIRJAUDU SISÄÄN</a></li>
-            <li class="separator"> | </li> 
-            <li class="city-selector"><a href="#">VAIHDA PAIKKAKUNTAA</a></li>       
+            <li class="separator"> | </li>
+            <li class="city-selector"><a href="#">VAIHDA PAIKKAKUNTAA  &#9660</a></li>
         </ul>
     </header>
 
     <!-- Container for the grid -->
     <div id="container">
 
+        <div id="banner">
+            <img src="./assets/img/megakisa-banner.png">
+        </div>
+
         <div id="grid-top">
-            <p>GRID-TOP</p>
         </div> <!-- /container -->
 
-        <div id="center-left">
-            <p>CENTER-LEFT</p>
+        <div id="center-left" class="container-box">
+            <img src="./assets/img/pipopää.png">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt interdum.</p>
+            <a href="#">Lue lisää &#9658;</a>
         </div> <!-- /center-left -->
 
-        <div id="center-middle">
-            <p>CENTER-MIDDLE</p>
-        </div> <!-- /center-middle -->
-
-        <div id="center-right">
-            <p>CENTER-RIGHT</p>
+        <div id="center-right" class="container-box">
+            <img src="./assets/img/suihkut.png">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt interdum.</p>
+            <a href="#">Lue lisää &#9658;</a>
         </div> <!-- /center-right -->
 
-    </div> <!-- /container -->
+        <div id="center-middle" class="container-box">
+            <img src="./assets/img/kortit.png">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt interdum.</p>
+            <a href="#">Lue lisää &#9658;</a>
+        </div> <!-- /center-middle -->
 
-    <footer>
+        <br style="clear: both;" />
+
+        <!-- Bottom row -->
+        <div id="bottom-left" class="container-box">
+            <p>BOTTOM LEFT</p>
+        </div>
+
+        <div id="bottom-right" class="container-box">
+            <p>BOTTOM RIGHT</p>
+        </div>
+
+        <div id="bottom-middle" class="container-box">
+            <p>BOTTOM MIDDLE</p>
+        </div>
+
+        <br style="clear: both;" />
+
+    </div><!-- /container -->
+
+    <!-- <footer>
         <p>FOOTER</p>
-    </footer>
-
-
+    </footer> -->
 </body>
 </html>
