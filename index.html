@@ -10,32 +10,51 @@
 
     <!-- CSS -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/js/Dropit-1.1.1/dropit.css" />
 
     <!-- Import fonts from Google -->
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="assets/js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+    <script type="text/javascript" src="assets/js/dropit.js"></script>
+
 
 </head>
 
 <body>
 
 
-    <div id="badge">
+    <!--<div id="badge">
         <p>MEGAKISA</p>
         <p id="badgecity">Oulu</p>
-    </div>
+    </div> -->
 
     <header>
-        <ul>            
+        <ul class="menu">            
             <li class="login-registration"><a href="#">REKISTERÖIDY</a></li>
             <li class="separator"> | </li> 
             <li class="login-registration"><a href="#">KIRJAUDU SISÄÄN</a></li>
             <li class="separator"> | </li>
-            <li class="city-selector"><a href="#">VAIHDA PAIKKAKUNTAA  &#9660</a></li>
+            <li class="city-selector"><a href="#">VAIHDA PAIKKAKUNTAA  &#9660</a>
+                <ul>
+                    <li><a href="#">Oulu</a></li>
+                    <li><a href="#">Tampere</a></li>
+                    <li><a href="#">Turku</a></li>
+                </ul>
+            </li>
         </ul>
     </header>
 
     <!-- Container for the grid -->
     <div id="container">
+
+    <div id="test">
+    </div>
+
+    <script>
+        $( "#test" ).load( "https://bitbucket.org/iuuso/viidakko-challenge/raw/b3e14c5641cc5100f87adb624dab48bed136ba35/content/oulu.html");
+    </script>
 
         <div id="banner">
             <img src="./assets/img/megakisa-banner.png">
@@ -44,40 +63,16 @@
         <div id="grid-top">
         </div> <!-- /container -->
 
-        <div id="center-left" class="container-box">
-            <img src="./assets/img/pipopää.png">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt interdum.</p>
-            <a href="#">Lue lisää &#9658;</a>
-        </div> <!-- /center-left -->
+        <div id="boxed-content">
 
-        <div id="center-right" class="container-box">
-            <img src="./assets/img/suihkut.png">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt interdum.</p>
-            <a href="#">Lue lisää &#9658;</a>
-        </div> <!-- /center-right -->
+            <!-- Here is the content for different cities -->
 
-        <div id="center-middle" class="container-box">
-            <img src="./assets/img/kortit.png">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt interdum.</p>
-            <a href="#">Lue lisää &#9658;</a>
-        </div> <!-- /center-middle -->
-
-        <br style="clear: both;" />
-
-        <!-- Bottom row -->
-        <div id="bottom-left" class="container-box">
-            <p>BOTTOM LEFT</p>
         </div>
 
-        <div id="bottom-right" class="container-box">
-            <p>BOTTOM RIGHT</p>
-        </div>
-
-        <div id="bottom-middle" class="container-box">
-            <p>BOTTOM MIDDLE</p>
-        </div>
-
-        <br style="clear: both;" />
+        <script>
+            $( "#boxed-content").load( "https://bitbucket.org/iuuso/viidakko-challenge/raw/25bdb61f496a2f846320987a3ba75c488083b29f/content/oulu.html" );
+        </script>
+        
 
     </div><!-- /container -->
 
