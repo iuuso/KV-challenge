@@ -150,7 +150,7 @@ footer li { display: inline; text-transform: uppercase; padding: 1em 1em; }
 #footerlinks a:hover { color: #e75169; }
 .left-aligned { float: left; margin: 19px auto; }
 .right-aligned { float: right; min-width: 110px; }
-.social-button { padding: 0; margin: auto -13px; }
+.social-button { padding: 0; margin-right: .1em; }
 
 #footer-contact {
 
