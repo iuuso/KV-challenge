@@ -16,8 +16,6 @@ html
     padding: 0;
 
     background: none;
-    /* Temporary text settings to make everything bold and big
-        for testing of the layout*/
 }
 
 body
@@ -31,18 +29,8 @@ body
 
     text-align: center;
 
-    background: #f1f1ec;
+    background: #f9f9f4;
 }
-
-#wrapper
-{
-    width: 80%;
-    margin: auto;
-    max-width: 1200px;
-    min-width: 800px;
-}
-
-
 
 /* Make the images scalable */
 
@@ -51,6 +39,12 @@ img
     max-width: 100%;
     margin: 0;
 } 
+
+/* ==========================================================================
+
+    HEADER
+
+========================================================================== */
 
 header
 {
@@ -63,65 +57,118 @@ header
     height: 3em;
     margin: 0;
     padding: 0;
+    
+    font: 10pt/1.5em 'Roboto Slab', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 13px;e
 
     border-bottom: 4px solid #dbdbd5;
     background: white;
 }
-header ul
-{
-    display: inline;
 
-    list-style-type: none;
-}
-header li
-{
-    float: right;
+    header ul { display: inline; list-style-type: none; }
+    header li { float: right; padding: .5em .7em; }
+    header li:hover > ul {
+        display: block;
+        background: white;
+    }
 
-    padding: .5em 1em;
-}
+    header ul ul 
+    { 
+        display: none;
+        height: 100px;
+        width: 100px;
+        border: 2px solid #dbdbd5;
+        text-align: center;
+    }
 
-.city-selector a:link,
-.city-selector a:visited
-{
-    color: #45a8cd;
-    text-decoration: none;
-}
-.login-registration a:link,
-.login-registration a:visited
-{
-    color: #bf243f;
-    text-decoration: none;
-}
+    .city-selector a:link,
+    .city-selector a:visited
+    {
+        color: #45a8cd;
+        text-decoration: none;
+    }
 
-.separator { color: #dbdbd5; }
+    /*.city-selector ul { display: none; }
+    .city-selector li:hover > ul {display: block;} */
+    .login-registration a:link,
+    .login-registration a:visited
+    {
+        color: #bf243f;
+        text-decoration: none;
+    }
 
-/* Dropdown menu for city selection*/
-header ul ul
-{
-    position: absolute;
-    top: 0;
+    /* Separator for items on header */
+    .separator { color: #dbdbd5; font-size: 1.33em}
 
-    background: black;
-}
-header ul li:hover > ul
-{
-    display: block;
 
-    background: black;
-}
+/* ==========================================================================
+
+    FOOTER
+
+========================================================================== */
 
 footer
 {
     position: relative;
     bottom: 0;
     left: 0;
-    margin-top: ;
 
     width: 100%;
     height: 15em;
 
-    border: 1px solid red;
+    background: -webkit-linear-gradient(#eaeae6, #f9f9f4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#eaeae6, #f9f9f4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#eaeae6, #f9f9f4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#eaeae6, #f9f9f4); /* Standard syntax */
+
+    -webkit-box-shadow: 0 0 15px 4px #dcdcd6 inset;
+    -moz-box-shadow: 0 0 15px 4px #dcdcd6 inset;
+    box-shadow: 0 0 15px 4px #dcdcd6 inset;
 }
+
+#footerlinks
+{ 
+    min-width: 90%; 
+
+    margin: 40px auto;
+    padding-top: 10px;
+    /*float: left; */
+    height: 5em;
+
+    font: 10pt/1.5em 'Roboto Slab', Arial, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 2px solid #ccc;
+
+}
+footer img { width: 35px; }
+footer ul { list-style-type: none; float: left;}
+footer li { display: inline; text-transform: uppercase; padding: 1em 1em; }
+#footerlinks a:link { color: #e93050; text-decoration: none; }
+#footerlinks a:hover { color: #e75169; }
+.left-aligned { float: left; margin: 19px auto; }
+.right-aligned { float: right; min-width: 110px; }
+.social-button { padding: 0; margin: auto -13px; }
+
+#footer-contact {
+
+    min-width: 40%;
+    margin: 0 auto;
+    color: #8B8878;
+    
+    font: 10pt/1.5em 'Roboto Mono', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    margin-left: 20px;
+    
+}
+
+#footer-contact ul { list-style-type: none; }
+#footer-contact li { display: inline; text-transform: uppercase; }
+.footer-contact-heavy { color: #4D4D4D; margin-left: 1px}
+.footer-contact-ligth { color: #ccc; margin-left: 20px; }
 
 
 /* The badge on header displaying the current city */
@@ -129,13 +176,33 @@ footer
 {
     position: fixed;
     z-index: 100;
-    top: -3em;
+    top: 0em;
     left: 10em;
+    padding: 3px auto;
 
-    width: 12em;
-    height: 10em;
+    width: 185px;
+    height: 130px;
 
-    background: #66b7d6;
+    background-image: url("../img/badge-bg.png");
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0px 2px #dbdbd5d5;
+}
+
+#badgeheader 
+{
+    font-size: 140%;
+    margin: 3px auto 0px;
+    font-weight: 700; 
+}
+
+#badgecity
+{
+    font-size: 2em;
+    margin: 0px auto 0;
+    font-weight: 900;
+
+
 }
 
 /* Banner image */
@@ -163,14 +230,15 @@ footer
     width: 100%;
     max-width: 286px;
     max-height: 245px;
-    margin: 15px auto 0 auto;
+    margin: 0 auto;
     padding-bottom: 2px;
 
     border: 2px solid #dbdbd5;
-    border-radius: 0;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
     background: white;
 
-    font-weight: 200;
+    font-weight: 400;
     text-align: left;
 }
 
@@ -183,16 +251,67 @@ footer
     width: 100%;
     max-width: 900px;
     height: 300px;
-    margin: 0 auto;
+    margin: 0 auto 2em ;
 
     border: 2px solid #dbdbd5;
     border-radius: 5px;
     background: url('../img/header-bg.png'); /* The "curtain" image */
     background-position: center;
 }
+    #grid-top-left 
+    {
+        width: 30%;
+        height: 100%;
+        float: left;
+        margin-left: 20px
+    }
+
+    #megapalkinto 
+    {
+        text-transform: uppercase;
+        color: #3b3838;
+        font-size: 12px;
+        opacity: 0.9;
+        max-width: 100%;
+        min-height: 22px;
+        border: 3px solid #888282;
+        border-radius: 20px;
+        margin: 20px auto;
+        background: #fefefe;
+    }
+
+    /* Big advertisement texts on top of the grid */
+    .awards {text-transform: uppercase; color: white; }
+    #product-big-text {
+        font: 'Roboto Slab'. Arial, sans-serif;
+        font-size: 380%;
+        line-height: 0.8; 
+        text-align: left;
+        text-shadow: 2px 4px 5px #4D4D4D; 
+        
+    }
+    #product-small-text { 
+        font-family: 200%;
+        margin: 0 auto;
+    }
+
+    /* Center picture and badge */
+    #grid-top-center {
+        float: left;
+        margin: 0 0 0 20px;
+        height: 80%;
+    }
+   
+    #grid-top-center img { height: 100%; }
+    #camera-badge {
+        background: #e92b4c;
+        border-radius: 10px;
+        text-transform: uppercase;
+        margin-top: -40px;
+    }
 
     #center-left { float: left; }
-    #center-middle { float: center;}
+    #center-middle { float: center; }
     #center-right { float: right;}
 
     #bottom-left { float: left; height: 600px; }
@@ -218,6 +337,8 @@ footer
     .separator { display: none; }
     header ul { position: relative; display: block; height: 500px;}
     .container-box { margin: 1em auto; max-width: 30%;}
+    footer li { font-size: 70%;}
+    .social-button { margin-right: .1em}
 }
 
 /* Settings for width of 600px */
@@ -240,4 +361,6 @@ footer
     header { height: 10em; position: static; top: 0px;}
     header ul li { display: block; float: left; width: 100%;}
     .separator {display: none; }
+    footer li { display: block; font-size: 70%; }
+    .social-button { display: inline-block; margin: .1em; }
 }

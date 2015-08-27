@@ -10,37 +10,34 @@
 
     <!-- CSS -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="assets/js/Dropit-1.1.1/dropit.css" />
 
     <!-- Import fonts from Google -->
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="assets/js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="assets/js/scripts.js"></script>
-    <script type="text/javascript" src="assets/js/dropit.js"></script>
-
-
+    <script type="text/javascript" src="assets/js/Dropit-1.1.1/dropit.js"></script>
 </head>
 
 <body>
 
 
-    <!--<div id="badge">
-        <p>MEGAKISA</p>
+    <<div id="badge">
+        <p id="badgeheader">Megakisa</p>
         <p id="badgecity">Oulu</p>
-    </div> -->
+    </div>
 
     <header>
-        <ul class="menu">            
+        <ul>            
             <li class="login-registration"><a href="#">REKISTERÖIDY</a></li>
             <li class="separator"> | </li> 
             <li class="login-registration"><a href="#">KIRJAUDU SISÄÄN</a></li>
             <li class="separator"> | </li>
             <li class="city-selector"><a href="#">VAIHDA PAIKKAKUNTAA  &#9660</a>
                 <ul>
-                    <li><a href="#">Oulu</a></li>
-                    <li><a href="#">Tampere</a></li>
-                    <li><a href="#">Turku</a></li>
+                    <li><a href="javascript:changeCity(Oulu);">Oulu</a></li>
+                    <li><a href="javascript:changeCity(Tampere);">Tampere</a></li>
+                    <li><a href="javascript:changeCity(Turku);">Turku</a></li>
                 </ul>
             </li>
         </ul>
@@ -49,19 +46,22 @@
     <!-- Container for the grid -->
     <div id="container">
 
-    <div id="test">
-    </div>
-
-    <script>
-        $( "#test" ).load( "https://bitbucket.org/iuuso/viidakko-challenge/raw/b3e14c5641cc5100f87adb624dab48bed136ba35/content/oulu.html");
-    </script>
-
         <div id="banner">
             <img src="./assets/img/megakisa-banner.png">
         </div>
 
         <div id="grid-top">
-        </div> <!-- /container -->
+            <div id="grid-top-left">
+                <p id="megapalkinto">Tässä kuussa megapalkintona</p>
+                <p id="product-big-text" class="awards">Canon Ixus 130</p>
+                <p id="product-small-text" class="awards">Digitaalikamera <br />14 megapikseliä</p>
+            </div> <!-- /grid-top-left -->
+
+            <div id="grid-top-center">
+                <img src="./assets/img/ixus.png">
+                <p id="camera-badge">Osallistu megakisaan ja voita</p>
+            </div>
+        </div> <!-- /grid-top -->
 
         <div id="boxed-content">
 
@@ -70,14 +70,35 @@
         </div>
 
         <script>
-            $( "#boxed-content").load( "https://bitbucket.org/iuuso/viidakko-challenge/raw/25bdb61f496a2f846320987a3ba75c488083b29f/content/oulu.html" );
+            $( "#boxed-content").load( "https://raw.githubusercontent.com/iuuso/KV-challenge/master/content/oulu.html" );
         </script>
         
 
     </div><!-- /container -->
 
-    <!-- <footer>
-        <p>FOOTER</p>
-    </footer> -->
+    <footer>
+        <div id="footerlinks">
+            <ul class="left-aligned">
+                <li><a href="#">Lyhyesti</a></li>
+                <li><a href="#">Yrityksille</a></li>
+                <li><a href="#">Kumppaneille</a></li>
+                <li><a href="#">Edelliset kisat</a></li>
+                <li><a href="#">Yhteystiedot</a></li>
+            </ul>
+
+        <!-- Social media badges downloaded from here: http://graphictorque.com/designblog/facebook-twitter-google-pinterest-icons/-->
+
+            <ul class="right-aligned">
+                <li><img class="social-button" src="./assets/img/pinterest.png"></li>
+                <li><img class="social-button" src="./assets/img/googleplus.png"></li>
+                <li><img class="social-button" src="./assets/img/facebook.png"></li>
+                <li><img class="social-button" src="./assets/img/twitter.png"></li>
+            </ul>
+        </div> <!-- /footerlinks -->
+
+        <div id="footer-contact">
+            <p> <span class="footer-contact-heavy">Local Media Finland Oy </span> | Alasintie 3-7 | 90400 Oulu </p>
+        </div> <!-- /footer-contact -->
+    </footer>
 </body>
 </html>
